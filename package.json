@@ -1,0 +1,14 @@
+{
+  "name": "gui-autotest",
+  "version": "1.0.0",
+  "description": "GUI test framework using testcafe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Martin Wrangenby",
+  "license": "ISC",
+  "devDependencies": {
+    "testcafe": "^0.23.2"
+  }
+}
