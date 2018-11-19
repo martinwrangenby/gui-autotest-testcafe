@@ -1,5 +1,5 @@
 {
-  "name": "gui-autotest",
+  "name": "gui-autotest-testcafe",
   "version": "1.0.0",
   "description": "GUI test framework using testcafe",
   "main": "index.js",
