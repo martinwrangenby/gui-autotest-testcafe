@@ -24,7 +24,7 @@ export default class PaymentPage {
         visa: Selector('.payment__visa'),
         masterCard: Selector('.payment__master-card'),
       },
-      purchaseComplete: Selector('.orderPage__text md', {timeout: 12000}),
+      purchaseComplete: Selector('.orderPage__text md'),
     }
   }
 

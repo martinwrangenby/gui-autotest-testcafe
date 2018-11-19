@@ -20,7 +20,7 @@ const paymentPage = new PaymentPage;
 
 
 const loginCredentials = testData.getLoginCredentials();
-const address = testData.getAddress();
+const userCredentials = testData.getUserCredentials();
 const paymentCard = testData.getPaymentCard();
 
 
@@ -38,7 +38,7 @@ fixture `Setting up annual subscriptions`
 
   test('Adding a new payment method (Visa card)', async t => {
     await footerMenu.navigateToProfile();
-    await t.expect(await getPageTitle(address.name)).ok(`Did not find expected page title for profile page containing user name: ${address.name}`)
+    await t.expect(await getPageTitle(userCredentials.name)).ok(`Did not find expected page title for profile page containing user name: ${userCredentials.name}`)
   
     await profilePage.clickSubscription();
     await t.expect(await getPageTitle('Your subscription')).ok('Did not find expected page title: "Your subscription"')
@@ -67,7 +67,7 @@ fixture `Setting up annual subscriptions`
   
     await footerMenu.navigateToProfile();
     // Had to add this two lines below because a page reload was needed for the new card to appear
-    await t.expect(await getPageTitle(address.name)).ok(`Did not find expected page title for profile page containing user name: ${address.name}`)
+    await t.expect(await getPageTitle(userCredentials.name)).ok(`Did not find expected page title for profile page containing user name: ${userCredentials.name}`)
     await t.eval(() => location.reload(true));
     await profilePage.clickPayment();
     await paymentPage.removeCard('visa');
@@ -75,7 +75,7 @@ fixture `Setting up annual subscriptions`
 
   test('Using existing payment method already added (mastercard)', async t => {
     await footerMenu.navigateToProfile();
-    await t.expect(await getPageTitle(address.name)).ok(`Did not find expected page title for profile page containing user name: ${address.name}`)
+    await t.expect(await getPageTitle(userCredentials.name)).ok(`Did not find expected page title for profile page containing user name: ${userCredentials.name}`)
   
     await profilePage.clickSubscription();
     await t.expect(await getPageTitle('Your subscription')).ok('Did not find expected page title: "Your subscription"')
