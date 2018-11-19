@@ -15,5 +15,5 @@
     "rimraf": "^2.6.2",
     "testcafe": "^0.23.2",
     "testcafe-reporter-xunit": "^2.1.0"
-  },
+  }
 }
