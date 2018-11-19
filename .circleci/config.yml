@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8.12
+      - image: circleci/node:8.12-browsers
     working_directory: ~/repo
 
     steps:
@@ -24,5 +24,9 @@ jobs:
         
       # run tests!
       - run: yarn test-headless
+
+      - store_test_results:
+          path: /temp/test-report
+
 
 

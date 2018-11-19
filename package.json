@@ -4,12 +4,13 @@
   "description": "GUI test framework using testcafe",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe \"chrome -incognito\" tests/*.js --selector-timeout 150000",
-    "test-headless": "testcafe \"chrome:headless\" tests/*.js --selector-timeout 150000"
+    "test": "testcafe \"chrome -incognito\" tests/*.js -r xunit:temp/test-report/res.xml --selector-timeout 150000",
+    "test-headless": "testcafe \"chrome:headless\" tests/*.js -r xunit:temp/test-report/res.xml --selector-timeout 150000"
   },
   "author": "Martin Wrangenby",
   "license": "ISC",
   "devDependencies": {
-    "testcafe": "^0.23.2"
+    "testcafe": "^0.23.2",
+    "testcafe-reporter-xunit": "^2.1.0"
   }
 }

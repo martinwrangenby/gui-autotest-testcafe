@@ -33,7 +33,6 @@ fixture `Setting up annual subscriptions`
 
     await authpage.enterCredentialsAndLogin(loginCredentials);
     await calendarPage.handlePopup();
-    await t.expect(await getPageTitle('Calendar')).ok('Did not find expected page title: "Calendar"')
   })
 
   test('Adding a new payment method (Visa card)', async t => {
