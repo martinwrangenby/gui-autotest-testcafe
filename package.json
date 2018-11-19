@@ -4,7 +4,8 @@
   "description": "GUI test framework using testcafe",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/testcafe \"chrome -incognito\" tests/*.js"
+    "test": "testcafe \"chrome -incognito\" tests/*.js --selector-timeout 150000",
+    "test-headless": "testcafe \"chrome:headless\" tests/*.js --selector-timeout 150000"
   },
   "author": "Martin Wrangenby",
   "license": "ISC",
