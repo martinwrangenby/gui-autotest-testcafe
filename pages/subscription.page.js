@@ -10,14 +10,14 @@ export default class SubscriptionPage {
         confirmSubscriptioncancellation: Selector('button[ion-button="alert-button"]', {index:1}),
         thermometer: {
           yes: Selector('button[color="grape"]',  {index: 0}),
-          no: Selector('button[color="grape"]',  {index: 1})
-        }
+          no: Selector('button[color="grape"]',  {index: 1}),
+        },
       },
     };
-  };
+  }
 
   async clickChooseSubscription() {
-    await t.click(this.selectors.button.chooseSubscription)
+    await t.click(this.selectors.button.chooseSubscription);
   }
 
   async clickAnnualPlan() {
@@ -34,6 +34,4 @@ export default class SubscriptionPage {
       .click(this.selectors.button.confirmSubscriptioncancellation);
     await this.selectors.button.chooseSubscription.visible;
   }
-
 }
-

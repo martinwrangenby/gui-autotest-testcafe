@@ -5,8 +5,8 @@ export default class IntroPage {
     this.selectors = {
       button: {
         login: Selector('[uid="introPage__login__button"]'),
-      }
-    }
+      },
+    };
   }
 
   async clickLoginButton () {

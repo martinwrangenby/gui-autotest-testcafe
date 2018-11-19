@@ -1,4 +1,3 @@
-// Convert to a class so everything can be imported more easily
 export function getBaseUrl() {
   return 'https://master--ncapp3.netlify.com'
 }
@@ -29,10 +28,6 @@ export function getPaymentCard() {
       date: '1225',
       cvv: '123',
       lastDigitsInNumber: '4444',
-    }
+    },
   }
 }
-
-
-// Master Card. Number: 5555555555554444, Date: 1225, cvv: 123
-// Visa. Number: 4005519200000004, Date: 1226, cvv: 123

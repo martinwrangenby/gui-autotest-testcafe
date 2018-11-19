@@ -5,8 +5,8 @@ export default class FooterMenu {
     this.selectors = {
       button: {
         profile: Selector('a').withText('Profile'),
-      }
-    }
+      },
+    };
   }
 
   async navigateToProfile () {

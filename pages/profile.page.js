@@ -6,8 +6,8 @@ export default class ProfilePage {
       button: {
         subscription: Selector('[uid="profilePage__subscription__button"]'),
         payment: Selector('[uid="profilePage__paymentMethod__button"]'),
-      }
-    }
+      },
+    };
   }
 
   async clickSubscription () {

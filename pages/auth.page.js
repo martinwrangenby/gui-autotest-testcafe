@@ -12,14 +12,14 @@ export default class AuthPage {
         acceptTerms: Selector('[uid="auth__terms__accept__button"]'),
       },
     };
-  };
+  }
 
   async enterCredentialsAndLogin (credentials) {
     await t
       .typeText(this.selectors.inputField.email , credentials.email, { replace: true })
       .typeText(this.selectors.inputField.password, credentials.password, { replace: true })
       .click(this.selectors.button.createAccount);
-  };
+  }
 
   async clickAcceptTerms() {
     await t.click(this.selectors.button.acceptTerms);
@@ -28,6 +28,4 @@ export default class AuthPage {
   async isContinueButtonDisabled() {
     return this.selectors.button.createAccount.hasAttribute('disabled');
   }
-
-  
 }

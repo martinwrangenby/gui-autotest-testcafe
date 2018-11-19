@@ -25,7 +25,7 @@ export default class PaymentPage {
         masterCard: Selector('.payment__master-card'),
       },
       purchaseComplete: Selector('.orderPage__text md'),
-    }
+    };
   }
 
   async addPayment() {
@@ -36,6 +36,7 @@ export default class PaymentPage {
     await t
       .click(this.selectors.button.cardPayment);
   }
+
   async setPaymentCardInfo(paymentCard) {
     await t
     .switchToIframe(this.selectors.iframe.cardNumber)
@@ -49,6 +50,7 @@ export default class PaymentPage {
     .switchToMainWindow()
     .click(this.selectors.button.pay)
   }
+  
   async getPurchaseConfirmation() {
     return await this.selectors.purchaseComplete.textContent;
   }
@@ -65,11 +67,6 @@ export default class PaymentPage {
     await t
       .click(this.selectors.paymentCards[card])
       .click(this.selectors.button.confirmCardRemoval)
-      await !this.selectors.paymentCards[card].visible
-
-
+      await !this.selectors.paymentCards[card].visible;
   }
-
 }
-
-

@@ -16,23 +16,19 @@ const profilePage = new ProfilePage;
 const subscriptionPage = new SubscriptionPage;
 const paymentPage = new PaymentPage;
 
-
-
 const loginCredentials = testData.getLoginCredentials();
 const userCredentials = testData.getUserCredentials();
 const paymentCard = testData.getPaymentCard();
 
-
 fixture `Setting up annual subscriptions`
   .page `${(testData.getBaseUrl())}`
-
   .beforeEach(async t => {
     await introPage.clickLoginButton();
     await t.expect(await authpage.isContinueButtonDisabled()).ok('Could not find login button in disabled state on auth page')
 
     await authpage.enterCredentialsAndLogin(loginCredentials);
     await calendarPage.handlePopup();
-  })
+  });
 
   test('Adding a new payment method (Visa card)', async t => {
     await footerMenu.navigateToProfile();
