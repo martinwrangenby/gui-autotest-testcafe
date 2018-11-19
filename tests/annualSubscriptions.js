@@ -24,7 +24,7 @@ const address = testData.getAddress();
 const paymentCard = testData.getPaymentCard();
 
 
-fixture `Setting up annual subscriptions `
+fixture `Setting up annual subscriptions`
   .page `${(testData.getBaseUrl())}`
 
   .beforeEach(async t => {
