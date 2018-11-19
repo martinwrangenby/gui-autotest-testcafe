@@ -1,4 +1,3 @@
-import { Selector } from 'testcafe';
 import * as testData from '../utils/testData';
 import { getPageTitle } from '../utils/helpers';
 import IntroPage from '../pages/intro.page';
