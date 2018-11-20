@@ -21,13 +21,11 @@ export function getPaymentCard() {
       number: '4005519200000004',
       date: '1226',
       cvv: '123',
-      lastDigitsInNumber: '0004',
     },
     masterCard: {
       number: '5555555555554444',
       date: '1225',
       cvv: '123',
-      lastDigitsInNumber: '4444',
     },
   }
 }
