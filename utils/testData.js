@@ -11,6 +11,9 @@ export function getLoginCredentials() {
 
 export function getUserCredentials() {
   return {
+    zipCode: '11426',
+    city: 'Stockholm',
+    street: 'Testgatan 6',
     name: 'Test Testson',
   }
 }
