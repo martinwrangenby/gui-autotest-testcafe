@@ -24,7 +24,7 @@ export default class PaymentPage {
         visa: Selector('.payment__visa'),
         masterCard: Selector('.payment__master-card'),
       },
-      purchaseComplete: Selector('.orderPage__text md'),
+      purchaseComplete: Selector('.orderPage__text md', {visibilityCheck: true, timeout: 25000}),
     };
   }
 
@@ -50,7 +50,7 @@ export default class PaymentPage {
     .switchToMainWindow()
     .click(this.selectors.button.pay)
   }
-  
+
   async getPurchaseConfirmation() {
     return await this.selectors.purchaseComplete.textContent;
   }
