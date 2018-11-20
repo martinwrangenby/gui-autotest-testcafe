@@ -27,6 +27,3 @@ jobs:
 
       - store_test_results:
           path: temp/test-report
-
-
-
