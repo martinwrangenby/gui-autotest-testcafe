@@ -12,6 +12,7 @@ export default class SubscriptionPage {
           yes: Selector('button[color="grape"]',  {index: 0}),
           no: Selector('button[color="grape"]',  {index: 1}),
         },
+        verifyThermometer: Selector('[uid="subscription__plan__THERMOMETER__button"]')
       },
     };
   }
@@ -26,6 +27,10 @@ export default class SubscriptionPage {
 
   async addThermometer(choice) {
     await t.click(this.selectors.button.thermometer[choice]);
+  }
+
+  async verifyThermometer() {
+    await t.click(this.selectors.button.verifyThermometer);
   }
 
   async cancelSubscription() {

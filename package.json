@@ -4,9 +4,9 @@
   "description": "GUI test framework using testcafe",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe \"chrome -incognito\" tests/*.js -S -s temp/screenshots --selector-timeout 15000",
-    "test-xunit": "testcafe \"chrome -incognito\" tests/*.js -r xunit:temp/test-report/res.xml -S -s temp/screenshots --selector-timeout 15000",
-    "test-headless": "testcafe \"chrome:headless\" tests/*.js -r xunit:temp/test-report/res.xml -S -s temp/screenshots --selector-timeout 15000",
+    "test": "testcafe \"chrome -incognito\" tests/*.js -S -s temp/screenshots --selector-timeout 17000",
+    "test-xunit": "testcafe \"chrome -incognito\" tests/*.js -r xunit:temp/test-report/res.xml -S -s temp/screenshots --selector-timeout 17000",
+    "test-headless": "testcafe \"chrome:headless\" tests/*.js -r xunit:temp/test-report/res.xml -S -s temp/screenshots --selector-timeout 17000",
     "clean": "rimraf temp/test-report/res.xml && rimraf temp/screenshots/*"
   },
   "author": "Martin Wrangenby",
