@@ -12,8 +12,8 @@
   "author": "Martin Wrangenby",
   "license": "ISC",
   "devDependencies": {
-    "rimraf": "^2.6.2",
-    "testcafe": "^0.23.2",
+    "rimraf": "^3.0.0",
+    "testcafe": "^1.8.1",
     "testcafe-reporter-xunit": "^2.1.0"
   }
 }
